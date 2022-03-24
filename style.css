@@ -48,7 +48,7 @@ h1 {
   border-radius: 50%;
 }
 
-.cislo:last-child {
+/* .cislo:last-child {
   margin-left: 23px;
   color: red;
 }
@@ -59,7 +59,7 @@ h1 {
   left: -23px;
   height: 100%;
   border-left: 3px solid red;
-}
+} */
 
 .cislo::before {
   z-index: -1;

@@ -25,51 +25,29 @@ function losuj() {
     }
 
     // vypis do HTML 
-    
-    for (let j = 0; j < tazenaCisla.length; j++) {
 
-        function vypisCisla() {
+    /*
+        for (let j = 0; j < tazenaCisla.length; j++) {
+            
             setTimeout(function() { vyherniCisla.innerHTML += '<span class="cislo">' + tazenaCisla[j] + '</span>'; }, 2000 * j);
+            
         }
+    */    
+
+    
+    // mám plné pole tazenaCisla se sedmi čísly, chci je postupně po dvou vteřinách  zobrazit
+
+    tazenaCisla.forEach((ele, idx) => {
+        setTimeout(() => {
+        console.log(ele);
+        vyherniCisla.innerHTML += '<span class="cislo">' + tazenaCisla[idx] + '</span>';
+        }, idx * 2000);  
+    });
+
+    // let posledniCislo = document.querySelector("vyherniCisla:last-child");
+    // posledniCislo.classList.remove(".cislo:last-child");
         
-        vypisCisla();
-    }
 
-    
-    
-    /*
-    for (let j = 0; j < tazenaCisla.length; j++) {
-       vyherniCisla.innerHTML += '<span class="cislo">' + tazenaCisla[j] + '</span>';
-    }
-
-    */
-    
-    /*
-    let j = 0;
-    
-    while (j < tazenaCisla.length) {
-
-        function pridejCislo() {
-            vyherniCisla.innerHTML += '<span class="cislo">' + tazenaCisla[j] + '</span>';
-        }
-
-        function pridejIndex() {
-            j++;
-        }
-
-        if (j < tazenaCisla.length) {
-            setTimeout(pridejIndex, 3000);
-        }
-
-        pridejCislo();
-        pridejIndex();
-
-    }
-
-    */
-
-
- 
 }
 
 
